@@ -63,7 +63,7 @@ class Arduino(object):
     def __getData(self):
         input_string = self.serial.readline()
         input_string = input_string.decode('utf-8')
-        return input_string.rstrip('\n')
+        return input_string.rstrip('\r\n')
 
     def __formatPinState(self, pinValue):
         if pinValue == '1':
